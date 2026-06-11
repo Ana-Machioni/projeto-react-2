@@ -1,32 +1,49 @@
+import { useState } from "react";
 import styles from "./UseStateHook.module.css"
 
-function UseStateHook () {
-   const [nome, setNome] = useState('Clique em mudar.');
 
-   const atualizarNome = () => {
+function UseStateHook() {
 
-    setNome('Ana');
+    // inicializar o estado
+    const [nome, setNome] = useState('Clique em mudar.');
+    const [idade, setIdade] = useState(0);
+    const [eFalso, seteFalso] = useState(false);
+    const [fruta, setFruta] = useState('-------------');
 
-   }
+    // atualizar o estado
+     const mostrarFruta = () => {
+        setFruta('morango!')
+    }
 
+    const atualizarNome = () => {
+        setNome('Ivo');
+    }
 
-   const atualizarIdade = () => {
+    const atualizarIdade = () => {
+        setIdade(idade + 1)
+    }
 
-   }
+    const verificarEstado = () => {
+        seteFalso(!eFalso)
+    }
 
-   const verificarEstado = () => {
-    
-   }
-    
+    return(
+        <div>
+            <p>Nome: {nome}</p>
+            <button onClick={atualizarNome}>Mudar</button>
 
-   return 
+            <p>Idade: {idade}</p>
+            <button onClick={atualizarIdade}>Incrementar</button>
 
-   <div>
-        <p>Nome: {nome}</p>
-        <button onClick={atualizarNome}>Mudar</button>
+            <p>É falso: {eFalso ? 'NÃO':'SIM'}</p>
+            <button onClick={verificarEstado}>Verificar</button>
 
-   </div>
-   
+            <p>Fruta secreta: {fruta}</p>
+            <button onClick={mostrarFruta}>Mostrar Fruta secreta</button>
+        </div>
+    )
+
 }
+
 
 export default UseStateHook

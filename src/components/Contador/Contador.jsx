@@ -21,6 +21,11 @@ function Contador() {
         setNumero(Math.floor(Math.random() * (100 - 0)+ 0));
     }
 
+    const cor = () => {
+        if {numero > 0}{styles.positivo}
+         {numero < 0}{}
+    }
+
     return (
         <div className={styles.contador}>
             <h1>Esse é o contador!</h1>

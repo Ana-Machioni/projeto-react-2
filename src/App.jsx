@@ -6,6 +6,7 @@ import Lista from './components/Lista/Lista.jsx'
 import MsgUsuario from './components/MensagemUsuario/MsgUsuario.jsx'
 import UseStateHook from './components/UseStateHook/UseStateHook.jsx'
 import UeStateHook from './components/UseStateHook/UseStateHook.jsx'
+import Contador from './components/Contador/Contador.jsx'
 
 function App() {
 
@@ -24,13 +25,16 @@ function App() {
 
   return (
     <>
-      <Alunos nome={'olivia'} idade={16} ativo={true}></Alunos>
+
+      {/* <Alunos nome={'olivia'} idade={16} ativo={true}></Alunos>
       <Alunos nome={'ana'} idade={17} ativo={false}></Alunos>
       <Button></Button>
       <Card></Card>
       <Lista></Lista>
 
-      <UseStateHook></UseStateHook>
+      <UseStateHook></UseStateHook> */}
+
+      <Contador/>
 
 
 

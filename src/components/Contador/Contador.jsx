@@ -18,7 +18,7 @@ function Contador() {
     }
 
     const sortearnumero = () => {
-        Math.floor(Math.random() * 100);
+        setNumero(Math.floor(Math.random() * (100 - 0)+ 0));
     }
 
     return (
@@ -36,3 +36,4 @@ function Contador() {
 }
 
 export default Contador
+
